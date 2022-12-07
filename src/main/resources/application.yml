@@ -1,0 +1,25 @@
+server:
+  port: 8006
+spring:
+  datasource:
+    url: jdbc:h2:mem:default
+    username: sa
+    password:
+    driver-class-name: org.h2.Driver
+  jpa:
+    database: h2
+    hibernate:
+      ddl-auto: create
+    show-sql: true
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,prometheus
+  metrics:
+    export:
+      prometheus:
+        enabled: true
+    distribution:
+      percentiles-histogram:
+        "[http.server.requests]": true
