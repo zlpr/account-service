@@ -23,3 +23,17 @@ management:
     distribution:
       percentiles-histogram:
         "[http.server.requests]": true
+    enable:
+      tomcat: false
+      jvm: false
+      hikaricp: false
+      http: false
+      jdbc: false
+      process: false
+      executor: false
+      system: false
+      disk: false
+      logback: false
+      application: false
+      spring: false
+
