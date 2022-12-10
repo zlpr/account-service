@@ -1,5 +1,7 @@
 package com.example.account.service.service;
 
+import io.micrometer.core.annotation.Timed;
+
 public interface AccountService
 {
     /**
